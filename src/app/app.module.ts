@@ -10,6 +10,8 @@ import { SectionComponent } from './components/section/section.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FeedComponent } from './pages/feed/feed.component';
 import { UserProfileComponent } from './pages/profile/components/user-profile/user-profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 
 @NgModule({
@@ -20,13 +22,16 @@ import { UserProfileComponent } from './pages/profile/components/user-profile/us
     SectionComponent,
     ProfileComponent,
     FeedComponent,
+    GalleryComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
