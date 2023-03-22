@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+
+    .profile-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #icon {
+            display: inline-block;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .profile-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .profile-name {
+        display: flex;
+        justify-content: center;
+        padding-left: 1.7em;
+
+
+        .more-options {
+            text-align: justify;
+            padding-left: 10px;
+        }
+    }
+
+    .profile-desciption {
+        display: flex;
+        justify-content: center;
+
+    }
+}

@@ -1,0 +1,40 @@
+.container {
+    height: 5em;
+    font-family: 'Roboto', sans-serif;
+
+    .header {
+        width: 100%;
+
+    }
+
+    .activeLink{
+        font-weight: bold;
+    }
+
+    .menu {
+        text-align: left;
+        padding-left: 100px;
+
+    }
+    .menu ul li {
+        display: inline-block;
+        
+        // #icon{
+        //     width: 3em;    
+        //     padding: 30px 50px 0px 0px;
+        
+        // }
+
+    }
+    .menu ul li a {
+        display: block;
+        color: black;
+        padding: 30px 50px 0px 0px;
+        text-decoration: none;
+
+    }
+    .main {
+        padding: 50px 0;
+    }
+
+}
