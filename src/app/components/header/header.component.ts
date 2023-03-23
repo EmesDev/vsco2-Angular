@@ -5,16 +5,26 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit{
-  IconPath: string;
+export class HeaderComponent implements OnInit {
+  IconPathSearch: any;
+  IconPathUpload: any;
+  IconPathMenu: any;
+  IconPathLogo: any;
 
   constructor() {
-    this.IconPath = '/assets/icons/vsco.png'
 
   }
 
   ngOnInit(): void {
-    
+    this.montarIcons()
+
+  }
+
+  montarIcons() {
+    this.IconPathSearch = '/assets/icons/procurar.png'
+    this.IconPathUpload = '/assets/icons/link.png'
+    this.IconPathMenu = '/assets/icons/menu.png'
+
   }
 
 }

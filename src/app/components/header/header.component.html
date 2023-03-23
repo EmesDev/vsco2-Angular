@@ -2,18 +2,39 @@
     <header class="header">
         <nav class="menu">
             <ul>
-                <li>
-                    <a href="#">vsco</a>
-                </li>
-                <li>
-                    <a href="#">Stories</a>
-                </li>
-                <li>
-                    <a routerLink="/feed" routerLinkActive="activeLink">Feed</a>
-                </li>
-                <li>
-                    <a routerLink="/profile" routerLinkActive="activeLink">Profile</a>
-                </li>
+                <div>
+                    <div class="left">
+                        <li>
+
+                            <a href="#"> Vsco</a>
+                        </li>
+                        <li>
+                            <a href="#">Stories</a>
+                        </li>
+                        <li>
+                            <a routerLink="/feed" routerLinkActive="activeLink">Feed</a>
+                        </li>
+                        <li>
+                            <a routerLink="/profile" routerLinkActive="activeLink">Profile</a>
+                        </li>
+                    </div>
+                    <div class="right">
+
+                        <li id="right">
+                            <a routerLink="#" routerLinkActive="activeLink"><img id="icon" [src]="IconPathUpload"
+                                    alt=""></a>
+                        </li>
+                        <li id="right">
+                            <a id routerLink="#" routerLinkActive="activeLink"><img id="icon" [src]="IconPathSearch"
+                                    alt=""></a>
+                        </li>
+                        <li id="right">
+                            <a routerLink="#" routerLinkActive="activeLink"><img id="icon" [src]="IconPathMenu"
+                                    alt=""></a>
+                        </li>
+                    </div>
+
+                </div>
             </ul>
         </nav>
     </header>

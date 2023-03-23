@@ -1,39 +1,59 @@
 .container {
     height: 5em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 
     .header {
         width: 100%;
-
     }
 
-    .activeLink{
+    .activeLink {
         font-weight: bold;
     }
 
     .menu {
+
         text-align: left;
-        padding-left: 100px;
+        padding-left: 50px;
+
+        .left {
+            width: 38%;
+            float: left;
+        }
+
+        .right {
+            width: 38%;
+            text-align: right;
+            float: right;
+
+        }
 
     }
+
     .menu ul li {
         display: inline-block;
-        
-        // #icon{
-        //     width: 3em;    
-        //     padding: 30px 50px 0px 0px;
-        
-        // }
+
+
+        #logo {
+            width: 5em;
+        }
+
+        #icon {
+            width: 0.9em;
+
+        }
 
     }
+
     .menu ul li a {
         display: block;
         color: black;
         padding: 30px 50px 0px 0px;
         text-decoration: none;
-
+        font-size: 1.4em;
     }
+
     .main {
+
         padding: 50px 0;
     }
 

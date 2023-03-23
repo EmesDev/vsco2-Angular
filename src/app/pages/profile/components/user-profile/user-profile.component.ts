@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
   ProfilePath: string;
+  MenuPath: any;
 
   constructor() {
     this.ProfilePath = '/assets/profile/profile-image-1.jpg'
+    this.MenuPath = '/assets/icons/pontos-de-menu.png'
+
 
   }
 
   ngOnInit(): void {
-    
+
   }
 
 }

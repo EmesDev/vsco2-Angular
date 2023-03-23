@@ -15,6 +15,7 @@
             width: 100px;
             height: 100px;
         }
+
     }
 
     .profile-image img {
@@ -30,9 +31,16 @@
 
 
         .more-options {
-            text-align: justify;
-            padding-left: 10px;
+
+            margin-top: 10px;
+            margin-left: 4px;
+
+            #icon-menu {
+                width: 1em;
+            }
         }
+
+
     }
 
     .profile-desciption {
