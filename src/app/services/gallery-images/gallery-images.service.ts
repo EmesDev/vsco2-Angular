@@ -23,4 +23,16 @@ export class GalleryImagesService {
     
   }
 
+  getMyCollection(): Observable<any>{
+    const headers = new HttpHeaders({
+      'Authorization': `${this.key}`
+    })
+
+    const requestOptions = {headers: headers}
+
+    return this.httpClient.get<any>('https://api.pexels.com/v1/collections/kxtwkgc', requestOptions)
+    .pipe()
+    
+  }
+
 }

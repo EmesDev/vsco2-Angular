@@ -1,13 +1,13 @@
-import {  Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GalleryImagesService } from 'src/app/services/gallery-images/gallery-images.service';
 
-
 @Component({
-  selector: 'app-gallery',
-  templateUrl:'./gallery.component.html',
-  styleUrls: ['./gallery.component.scss'] 
+  selector: 'app-gallery-profile',
+  templateUrl: './gallery-profile.component.html',
+  styleUrls: ['./gallery-profile.component.scss']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryProfileComponent implements OnInit{
+
   data: any [];
 
   constructor(private galleryImagesService: GalleryImagesService  ){
@@ -21,13 +21,10 @@ export class GalleryComponent implements OnInit {
   
 
   searchImages() {
-    this.galleryImagesService.getImagens().subscribe(data=>{
+    this.galleryImagesService.getMyCollection().subscribe(data=>{
       console.log(data)
-      this.data = data.photos
+      this.data = data.media
     })
 
-  }
-  
-
-  
+}
 }

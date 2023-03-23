@@ -12,6 +12,7 @@ import { FeedComponent } from './pages/feed/feed.component';
 import { UserProfileComponent } from './pages/profile/components/user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { GalleryProfileComponent } from './pages/profile/components/gallery-profile/gallery-profile.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     ProfileComponent,
     FeedComponent,
     GalleryComponent,
+    GalleryProfileComponent,
     
 
   ],
