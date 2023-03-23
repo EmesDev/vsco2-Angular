@@ -1,4 +1,4 @@
-export class ImagesModel{
+export interface ImagesModel{
     next_page: string;
     page: number;
     per_page: number;

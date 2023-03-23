@@ -1,9 +1,8 @@
-<table class="table">
-    <tbody>
-        <tr *ngFor="let img of images  ">
-            <td><img src="{{img}}"></td>
 
-        </tr>
-    </tbody>
+    <div class="wrapper">
+      <div class="gallery">
+        <ul *ngFor="let d of data">
+          <li><img [src]="d.src.medium" alt=""></li>
 
-</table>
+        </ul>
+      </div>
