@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryProfileComponent } from './pages/profile/components/gallery-profile/gallery-profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
     GalleryComponent,
     GalleryProfileComponent,
     FooterComponent,
+    HomeComponent,
     
 
   ],
