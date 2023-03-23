@@ -1,0 +1,62 @@
+.container{
+    display: flexbox;
+    top: 100%;
+    width: 100%;
+    height: 20em;
+
+    .left{
+        float: left;
+
+    }
+
+    .right{
+        float: right;
+
+    }
+
+    footer{
+        .logo{
+            margin-left: 15px;
+
+
+        }
+
+        .logo #centralizar{
+            text-align: center;
+            width: 112px;
+
+        }
+
+        .logo #logo-vsco{
+            width: 8em;
+            margin-top: 30px;
+            text-align: center;
+            
+        }
+    
+        .container-table{
+            table{
+                border-spacing: 1em;
+                margin-right: 30px;
+
+            }
+            table th{
+                text-align: left;
+                margin-right: 10px;
+                color: rgb(73, 73, 73);
+
+            }
+            table  td{
+                color: rgb(116, 114, 114);
+
+            }
+    
+        }
+    
+    
+    }
+ 
+   
+        
+}
+

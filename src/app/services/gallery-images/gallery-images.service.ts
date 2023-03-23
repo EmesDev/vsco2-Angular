@@ -1,6 +1,6 @@
-import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {  Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -11,28 +11,28 @@ export class GalleryImagesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getImagens(): Observable<any>{
+  getImagens(): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `${this.key}`
     })
 
-    const requestOptions = {headers: headers}
+    const requestOptions = { headers: headers }
 
     return this.httpClient.get<any>('https://api.pexels.com/v1/curated?per_page=40', requestOptions)
-    .pipe()
-    
+      .pipe()
+
   }
 
-  getMyCollection(): Observable<any>{
+  getMyCollection(): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `${this.key}`
     })
 
-    const requestOptions = {headers: headers}
+    const requestOptions = { headers: headers }
 
     return this.httpClient.get<any>('https://api.pexels.com/v1/collections/kxtwkgc', requestOptions)
-    .pipe()
-    
+      .pipe()
+
   }
 
 }

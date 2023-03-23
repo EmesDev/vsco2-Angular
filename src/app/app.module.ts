@@ -13,6 +13,7 @@ import { UserProfileComponent } from './pages/profile/components/user-profile/us
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryProfileComponent } from './pages/profile/components/gallery-profile/gallery-profile.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { GalleryProfileComponent } from './pages/profile/components/gallery-prof
     FeedComponent,
     GalleryComponent,
     GalleryProfileComponent,
+    FooterComponent,
     
 
   ],
