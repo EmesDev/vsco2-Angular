@@ -1,17 +1,30 @@
-
-
-
-.container{
+.container {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom, rgba(114, 114, 114, 0.52), rgb(19, 19, 19)), url(../../../assets/imgs/capa-home.jpg);
     background-size: 100%;
-       
+    text-align: center;
+    color: azure;
 
+    .conteudo {
+        padding-top: 60vh;
+
+        h1 {
+            padding-bottom: 5vh;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 400;
+            font-size: 3.5em;
+
+        }
+    }
+
+    #logo {
+        filter: invert(92%);
+        width: 8em;
+
+    }
 }
 
-.teste{
-    background-color: rgb(19, 19, 19);
-    height: 3000px;
-    width: 100%;
+#id {
+    filter: invert(100%)
 }
