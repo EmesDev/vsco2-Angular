@@ -15,6 +15,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryProfileComponent } from './pages/profile/components/gallery-profile/gallery-profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { StoryComponent } from './pages/story/story.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { HomeComponent } from './pages/home/home.component';
     GalleryProfileComponent,
     FooterComponent,
     HomeComponent,
+    StoryComponent,
     
 
   ],
