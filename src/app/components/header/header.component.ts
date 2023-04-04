@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
+import { ModalUploadComponent } from '../modal-upload/modal-upload.component';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  // @ViewChild('modal') private modalContent: TemplateRef<ModalUploadComponent>
+
+ 
+
+
+
   IconPathSearch: any;
   IconPathUpload: any;
   IconPathMenu: any;
   IconPathLogo: any;
+
+
 
   constructor() {
 
@@ -20,10 +29,27 @@ export class HeaderComponent implements OnInit {
 
   }
 
+
   montarIcons() {
     this.IconPathSearch = '/assets/icons/procurar.png'
     this.IconPathUpload = '/assets/icons/link.png'
     this.IconPathMenu = '/assets/icons/menu.png'
+
+  }
+
+  openModal() {
+    this.toggleModal()
+
+  }
+
+  toggleModal() {
+
+    const modal = document.querySelector("#modal")!;
+    const fade = document.querySelector('#fade')!;
+    modal.classList.toggle('hide')
+    fade.classList.toggle('hide')
+
+    
 
   }
 

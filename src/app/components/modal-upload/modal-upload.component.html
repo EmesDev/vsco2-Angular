@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div id="fade" class="hide" (click)="closeModal()">
+
+    </div>
+    <div id="modal" class="hide">
+        <div class="backgraund">
+
+            <div class="modal-header">
+                <button id="close-Modal" (click)="closeModal()"><img id="img" [src]="closeBtnPath" alt="">
+                </button>
+
+            </div>
+            <div class="modal-body">
+      
+                <div class="modal-body__header">
+                    <img [src]="uploadImgPath" alt="">
+                </div>
+                <div>
+                    <h1>Selecione o arquivo que deseja enviar para completar seu upload</h1>
+                </div>
+                <div class="modal-body__footer">
+                    <form class="form-upload">
+                    <label class="input-personalizado">
+                        <span class="botao-selecionar">Selecione uma imagem</span>
+                        <img class="imagem" />
+                        <input type="file" class="input-file" accept="image/*">
+                      </label>
+                    </form>
+                </div>
+                
+                
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+
+        </div>
+
+
+    
+    </div>
+</div>

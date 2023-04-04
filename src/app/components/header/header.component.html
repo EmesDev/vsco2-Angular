@@ -21,8 +21,7 @@
                     <div class="right">
 
                         <li id="right">
-                            <a routerLink="#" routerLinkActive="activeLink"><img id="icon" [src]="IconPathUpload"
-                                    alt=""></a>
+                            <a (click)="openModal()"><img id="icon" class="upload-icon" [src]="IconPathUpload" alt=""></a>
                         </li>
                         <li id="right">
                             <a id routerLink="#" routerLinkActive="activeLink"><img id="icon" [src]="IconPathSearch"
@@ -37,4 +36,6 @@
             </ul>
         </nav>
     </header>
+
+    <app-modal-upload></app-modal-upload>
 </div>

@@ -16,6 +16,7 @@ import { GalleryProfileComponent } from './pages/profile/components/gallery-prof
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StoryComponent } from './pages/story/story.component';
+import { ModalUploadComponent } from './components/modal-upload/modal-upload.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { StoryComponent } from './pages/story/story.component';
     FooterComponent,
     HomeComponent,
     StoryComponent,
+    ModalUploadComponent,
     
 
   ],
