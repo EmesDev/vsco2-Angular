@@ -1,7 +1,7 @@
 <div class="container">
     <div class="container-content">
-        <div class="profile-image">
-            <img id="icon" [src]="ProfilePath">
+        <div class="profile-image" *ngFor="let d of ProfilePath">
+            <img id="icon" [src]="d.src.medium">
         </div>
         <div class="profile-name">
             <div class="name">

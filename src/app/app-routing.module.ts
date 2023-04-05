@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'home', component: HomeComponent},
   {path: 'story', component: StoryComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

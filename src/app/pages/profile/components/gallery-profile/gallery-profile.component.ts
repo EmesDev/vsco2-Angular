@@ -11,7 +11,6 @@ export class GalleryProfileComponent implements OnInit{
   data: any [];
 
   constructor(private galleryImagesService: GalleryImagesService  ){
-    this.galleryImagesService.getImagens()
   }
  
 

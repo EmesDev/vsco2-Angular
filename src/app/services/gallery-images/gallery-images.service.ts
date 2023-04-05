@@ -1,13 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class GalleryImagesService {
-  key: string = 'i06U8TAKLdXGTPhUIaZ04q2NCm7HSPbTRYJuoU7GMQuXWidYhomZqGrP'
+  key: string = environment.pexelsApiKey
 
   constructor(private httpClient: HttpClient) { }
 
@@ -31,6 +32,18 @@ export class GalleryImagesService {
     const requestOptions = { headers: headers }
 
     return this.httpClient.get<any>('https://api.pexels.com/v1/collections/kxtwkgc', requestOptions)
+      .pipe()
+
+  }
+
+  getProfileImage(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `${this.key}`
+    })
+
+    const requestOptions = { headers: headers }
+
+    return this.httpClient.get<any>('https://api.pexels.com/v1/collections/xwyemrw', requestOptions)
       .pipe()
 
   }
