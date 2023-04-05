@@ -10,6 +10,6 @@ export class FooterComponent implements OnInit {
   logoPath: string;
 
   ngOnInit(): void {
-    this.logoPath = '/assets/icons/vsco.png'
+    this.logoPath = 'assets/icons/vsco.png'
   }
 }

@@ -20,8 +20,8 @@ export class ModalUploadComponent implements OnInit{
   closeModalButton = document.querySelector('#close-modal');
 
   ngOnInit(): void {
-    this.closeBtnPath = '/assets/icons/close.png'
-    this.uploadImgPath = '/assets/icons/upload-modal.png'
+    this.closeBtnPath = 'assets/icons/close.png'
+    this.uploadImgPath = 'assets/icons/upload-modal.png'
   }
 
   closeModal(){

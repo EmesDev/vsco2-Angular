@@ -31,9 +31,9 @@ export class HeaderComponent implements OnInit {
 
 
   montarIcons() {
-    this.IconPathSearch = '/assets/icons/procurar.png'
-    this.IconPathUpload = '/assets/icons/link.png'
-    this.IconPathMenu = '/assets/icons/menu.png'
+    this.IconPathSearch = 'assets/icons/procurar.png'
+    this.IconPathUpload = 'assets/icons/link.png'
+    this.IconPathMenu = 'assets/icons/menu.png'
 
   }
 

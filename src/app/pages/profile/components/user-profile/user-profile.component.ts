@@ -12,7 +12,7 @@ export class UserProfileComponent implements OnInit {
 
   constructor(    private galleryImagesService: GalleryImagesService ) {
     // this.ProfilePath = '/assets/profile/profile-image-1.jpg'
-    this.MenuPath = '/assets/icons/pontos-de-menu.png'
+    this.MenuPath = 'assets/icons/pontos-de-menu.png'
 
   }
 
