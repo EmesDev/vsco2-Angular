@@ -19,8 +19,9 @@ time, mark, audio, video {
 }
 
 .espacamento{
-	height: 26rem;
-}
+	display: flex;
+	height: 7rem;
+	width: 100%;}
 .wrapper {
 	width: 70%;
 	margin: 40px auto;
