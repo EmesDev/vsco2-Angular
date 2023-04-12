@@ -18,16 +18,10 @@ time, mark, audio, video {
 
 }
 
+
 .wrapper {
 	width: 70%;
-	margin: 40px auto;
-}
-
-.espacamento{
-	display: flex;
-	height: 7rem;
-	width: 100%;
-	
+	margin: 1px auto;
 }
 
 div.gallery {
@@ -39,19 +33,19 @@ div.gallery ul {
 	margin-left: 35px;
 }
 
-/* animation */
-div.gallery ul li, div.gallery li img {
-	-webkit-transition: all 0.1s ease-in-out;
-  	-moz-transition: all 0.1s ease-in-out;
-  	-o-transition: all 0.1s ease-in-out;
-  	transition: all 0.1s ease-in-out;
-}
+// /* animation */
+// div.gallery ul li, div.gallery li img {
+// 	-webkit-transition: all 0.1s ease-in-out;
+//   	-moz-transition: all 0.1s ease-in-out;
+//   	-o-transition: all 0.1s ease-in-out;
+//   	transition: all 0.1s ease-in-out;
+// }
 
 div.gallery ul li {
 	position: relative;
 	float: left;
-	width: 230px;
-	height: 230px;
+	width: 14.375rem;
+	height: 14.375rem;
 	margin: 15px;
 	padding: 5px;
 	z-index: 0;
@@ -69,32 +63,37 @@ div.gallery ul li img {
 	left: 0;
 	top: 0;
 
-	width: 230px;
-	height: 230px;
+	width: 14.375rem;
+	height: 14.375rem;
 	background: #f0f0f0;
     object-fit: cover;
 
 }
 
 
-
-p.attribution {
-	font-family: 'Consolas';
-	color: #000;
-	clear: both;
-	text-align: center;
-	line-height: 25px;
-	padding-top: 30px;
-}
-
-p.attribution a {
-	color: #4c8d7c;
-}
+.espacamento{
+	display: flex;
+	height: 7rem;
+	width: 100%;}
 
 @media only screen and (min-width: 499px) and (max-width: 1212px) {
 	.wrapper {
-		width: 500px;
+		width: 85%;
+		justify-content: space-around;
+
 	}
+
+	div.gallery ul li {
+		position: relative;
+		float: left;
+		width: 12.375rem;
+		height: 12.375rem;
+		margin: 15px;
+		padding: 5px;
+		z-index: 0;
+	}
+
+
 }
 
 @media only screen and (max-width: 498px) {
