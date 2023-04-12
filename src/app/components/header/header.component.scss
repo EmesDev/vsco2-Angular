@@ -64,18 +64,30 @@
         padding: 3.125rem 0;
     }
 
-    // @media (max-width: 768px) {
-    //     .menu{
-    //         display:none;
-    //         position: absolute;
-    //         // background-color:teal;
-    //         right: 0;
-    //         left: 0;
-    //         text-align: center;
-    //         padding: 16px 0;
-    //     }
+    @media (max-width: 768px) {
+        .menu ul li a {
+            display: block;
+            color: black;
+            padding: 1.875rem 3.125rem 0 0;
+            text-decoration: none;
+            font-size: 1.8vh;
+        }
+
+        .menu {
+    
+            .left {
+                width: 20%;
+            }
+    
+            .right {
+                width: 20%;
+
+    
+            }
+    
+        }
     
     
-    // }
+    }
 
 }
