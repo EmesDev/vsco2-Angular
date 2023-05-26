@@ -17,6 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StoryComponent } from './pages/story/story.component';
 import { ModalUploadComponent } from './components/modal-upload/modal-upload.component';
+import { GalleryLightboxComponent } from './components/gallery-lightbox/gallery-lightbox.component';
+import { CommonModule } from '@angular/common';
+import { GalleryImagesService } from './services/gallery-images/gallery-images.service';
 
 
 @NgModule({
@@ -33,6 +36,7 @@ import { ModalUploadComponent } from './components/modal-upload/modal-upload.com
     HomeComponent,
     StoryComponent,
     ModalUploadComponent,
+    GalleryLightboxComponent,
     
 
   ],
@@ -41,9 +45,10 @@ import { ModalUploadComponent } from './components/modal-upload/modal-upload.com
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    CommonModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GalleryImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
