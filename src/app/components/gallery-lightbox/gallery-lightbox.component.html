@@ -1,24 +1,36 @@
 <div class="gallery-lightbox-container">
-    <div class="gallery">
-        <div *ngFor="let data of galleryData; let i = index" class="gallery-img">
-            <img (click)="onPreviewImage(i)" [src]="data.imageSrc">
-        </div>
-        <div *ngIf="showMask" class="lightbox">
-            <span *ngIf="showCount" class="count">{{currentIndex + 1}}/{{totalImageCount}}</span>
-            <button *ngIf="previewImage" class="close-btn">
-                <i class="far fa-times"></i>
-            </button>
-            <button *ngIf="controls" class="btn-lightbox-carousel btn-prev">
-                <i class="fas fa-arrow-circle-left icon-lightbox-carousel icon-prev"></i>
-            </button>
-            <button *ngIf="controls" class="btn-lightbox-carousel btn-next">
-                <i class="fas fa-arrow-circle-right icon-lightbox-carousel icon-next"></i>
-
-            </button>
-
-            <div *ngIf="previewImage" class="lightbox-img">
-                <img [src]="currentLightboxImage.imageSrc">
-            </div>
-        </div>
+  <div class="gallery">
+    <div *ngFor="let data of galleryData; let i = index" class="gallery-img">
+      <img (click)="onPreviewImage(i)" [src]="data.imageSrc" />
     </div>
+    <div *ngIf="showMask" class="lightbox" @animation2>
+      <span *ngIf="showCount" class="count"
+        >{{ currentIndex + 1 }}/{{ totalImageCount }}</span
+      >
+      <button *ngIf="previewImage" class="close-btn" (click)="onClosePreview()">
+        <i class="far fa-times"></i>
+      </button>
+      <button *ngIf="controls" class="btn-lightbox-carousel btn-prev">
+        <i
+          class="fas fa-arrow-circle-left icon-lightbox-carousel icon-prev"
+          (click)="prev()"
+        ></i>
+      </button>
+      <button *ngIf="controls" class="btn-lightbox-carousel btn-next">
+        <i
+          class="fas fa-arrow-circle-right icon-lightbox-carousel icon-next"
+          (click)="next()"
+        ></i>
+      </button>
+
+      <div
+        *ngIf="previewImage"
+        [@animation]="{ value: 'visible' }"
+        (@animation.done)="onAnimationEnd($event)"
+        class="lightbox-img"
+      >
+        <img [src]="currentLightboxImage.imageSrc" />
+      </div>
+    </div>
+  </div>
 </div>

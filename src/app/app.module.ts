@@ -12,7 +12,6 @@ import { FeedComponent } from './pages/feed/feed.component';
 import { UserProfileComponent } from './pages/profile/components/user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { GalleryProfileComponent } from './pages/profile/components/gallery-profile/gallery-profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StoryComponent } from './pages/story/story.component';
@@ -31,7 +30,6 @@ import { GalleryImagesService } from './services/gallery-images/gallery-images.s
     ProfileComponent,
     FeedComponent,
     GalleryComponent,
-    GalleryProfileComponent,
     FooterComponent,
     HomeComponent,
     StoryComponent,

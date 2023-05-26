@@ -1,15 +1,39 @@
-import { Component,  Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {
+  animate,
+  style,
+  transition,
+  trigger,
+  AnimationEvent,
+} from '@angular/animations';
 
 interface Item {
-  imageSrc: string
+  imageSrc: string;
 }
 
 @Component({
   selector: 'app-gallery-lightbox',
   templateUrl: './gallery-lightbox.component.html',
-  styleUrls: ['./gallery-lightbox.component.scss']
+  styleUrls: ['./gallery-lightbox.component.scss'],
+  animations: [
+    trigger('animation', [
+      transition('void => visible', [
+        style({ transform: 'scale(0.5)' }),
+        animate('150ms', style({ transform: 'scale(1)' })),
+      ]),
+      transition('visible => void', [
+        style({ transform: 'scale(1)' }),
+        animate('110ms', style({ transform: 'scale(0.5)' })),
+      ]),
+    ]),
+    trigger('animation2', [
+      transition(':leave', [
+        style({opacity: 1}),
+        animate('50ms', style({opacity: 0.2}))
+      ])
+    ])
+  ],
 })
 export class GalleryLightboxComponent implements OnInit {
   @Input() galleryData: Item[] = [];
@@ -22,22 +46,45 @@ export class GalleryLightboxComponent implements OnInit {
   controls = true;
   totalImageCount = 0;
 
-  constructor( ) {
+  constructor() {}
+
+  ngOnInit(): void {
     this.totalImageCount = this.galleryData.length;
   }
 
-  ngOnInit(): void {
-    
-  }
-
-  onPreviewImage(index: number):void {
-    this.showMask = true
-    this.previewImage = true
+  onPreviewImage(index: number): void {
+    this.showMask = true;
+    this.previewImage = true;
     this.currentIndex = index;
-    console.log(this.galleryData[index])
-    this.currentLightboxImage = this.galleryData[index]
-
+    console.log(this.galleryData[index]);
+    this.totalImageCount = this.galleryData.length;
+    this.currentLightboxImage = this.galleryData[index];
   }
 
+  onAnimationEnd(event: AnimationEvent) {
+    if (event.toState === 'void') {
+      this.showMask = false
+    }
+  }
 
-}
+  onClosePreview(){
+    this.previewImage = false
+  }
+
+  next(): void{
+    this.currentIndex = this.currentIndex + 1;
+    if(this.currentIndex > this.galleryData.length - 1){
+      this.currentIndex = 0
+   }
+   this.currentLightboxImage = this.galleryData[this.currentIndex]
+  }
+
+  prev():void{
+    this.currentIndex = this.currentIndex - 1
+    if(this.currentIndex < 0){
+      this.currentIndex = this.galleryData.length - 1
+    }
+    this.currentLightboxImage = this.galleryData[this.currentIndex]
+
+  }
+  }
