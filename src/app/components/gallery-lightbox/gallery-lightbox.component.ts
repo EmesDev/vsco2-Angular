@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   animate,
@@ -38,6 +38,8 @@ interface Item {
 export class GalleryLightboxComponent implements OnInit {
   @Input() galleryData: Item[] = [];
   @Input() showCount = false;
+  @Output() clicked = new EventEmitter<number>(); // this is the output event that emits data to the parent
+
 
   previewImage = false;
   showMask = false;
@@ -45,11 +47,20 @@ export class GalleryLightboxComponent implements OnInit {
   currentIndex = 0;
   controls = true;
   totalImageCount = 0;
+  page = 1;
+
 
   constructor() {}
 
   ngOnInit(): void {
     this.totalImageCount = this.galleryData.length;
+  }
+
+  async onScroll() {
+   await this.clicked.emit(this.page);
+    this.page++
+    console.log(this.page)
+
   }
 
   onPreviewImage(index: number): void {

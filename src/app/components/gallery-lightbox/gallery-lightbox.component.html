@@ -1,5 +1,5 @@
-<div class="gallery-lightbox-container">
-  <div class="gallery">
+<div class="gallery-lightbox-container" infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()" >
+  <div class="gallery container" >
     <div *ngFor="let data of galleryData; let i = index" class="gallery-img">
       <img (click)="onPreviewImage(i)" [src]="data.imageSrc" />
     </div>

@@ -19,6 +19,7 @@ import { ModalUploadComponent } from './components/modal-upload/modal-upload.com
 import { GalleryLightboxComponent } from './components/gallery-lightbox/gallery-lightbox.component';
 import { CommonModule } from '@angular/common';
 import { GalleryImagesService } from './services/gallery-images/gallery-images.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -44,7 +45,9 @@ import { GalleryImagesService } from './services/gallery-images/gallery-images.s
     BrowserAnimationsModule,
     MatIconModule,
     CommonModule,
+    InfiniteScrollModule,
     HttpClientModule
+    
   ],
   providers: [GalleryImagesService],
   bootstrap: [AppComponent]

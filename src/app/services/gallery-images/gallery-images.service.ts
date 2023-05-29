@@ -24,6 +24,19 @@ export class GalleryImagesService {
 
   }
 
+  getImagensPage(page:number): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `${this.key}`
+    })
+
+    const requestOptions = { headers: headers }
+    console.log(page)
+
+    return this.httpClient.get<any>(`https://api.pexels.com/v1/curated?page=${page}&per_page=80`, requestOptions)
+      .pipe()
+
+  }
+
   getMyCollection(): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `${this.key}`

@@ -21,6 +21,22 @@ export class FeedComponent  implements OnInit{
     console.log(this.data)
   }
 
+  onClicked(page: number) {
+    this.galleryImagesService.getImagensPage(page).subscribe(async (data) => {
+      const newData = [];
+      for (let i = 0; i < data.photos.length; i++) {
+        const src = data.photos[i].src;
+        const medium = src.large2x;
+  
+        const item: Item = { imageSrc: medium };
+        newData.push(item);
+      }
+      this.data = this.data.concat(newData);
+    });
+  }
+
+  
+
   searchImages() {
     this.galleryImagesService.getImagens().subscribe((data) => {
       for (let i = 0; i < data.photos.length; i++) {
